@@ -1,0 +1,29 @@
+version: 2
+sources:
+  - name: datafeed_raw_schema
+    database: "{{('demo_dbt_project')}}"
+    schema: raw_schema
+
+    tables:
+      - name: RAW_CUSTOMERS
+      - name: RAW_PAYMENTS
+      - name: RAW_ORDERS
+
+models:
+    - name: STG_CUSTOMERS
+      description: "A staging customers dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: first_name
+            description: "The first name field for this table"
+            tests:
+                - not_null
+          - name: last_name
+            description: "The last name field for this table"
+            tests:
+                - not_null                                      
+          
