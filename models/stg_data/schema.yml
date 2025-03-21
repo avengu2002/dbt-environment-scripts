@@ -8,7 +8,7 @@ sources:
       - name: RAW_CUSTOMERS
       - name: RAW_PAYMENTS
       - name: RAW_ORDERS
-
+      - name: CUSTOMERS
 models:
     - name: STG_CUSTOMERS
       description: "A staging customers dbt model"

@@ -43,6 +43,9 @@ models:
     stg_data:
       +materialized: table
 
+snapshots:
+  +target_schema: snapshot_schema
+     
 vars:
     today_and_yesterday : [
         current_date()
