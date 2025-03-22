@@ -1,0 +1,10 @@
+snapshots:
+  - name: snap_customers_timestamp2
+    config:
+      hard_deletes: 'invalidate'
+  - name: snap_customers_timestamp3
+    config:
+      hard_deletes: 'new_record'
+  - name: snap_customers_timestamp4
+    config:
+      dbt_valid_to_current: "to_date('9999-12-31')"     
