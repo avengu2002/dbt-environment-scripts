@@ -8,6 +8,15 @@ sources:
       - name: RAW_CUSTOMERS
       - name: RAW_PAYMENTS
       - name: RAW_ORDERS
+        columns:
+        - name: id
+          tests:
+            - unique
+            - not_null
+        - name: status
+          tests:
+            - accepted_values
+              values:['placed', 'shipped', 'completed', 'returned', 'return_pending']       
       - name: CUSTOMERS
 models:
     - name: STG_CUSTOMERS
@@ -25,5 +34,7 @@ models:
           - name: last_name
             description: "The last name field for this table"
             tests:
-                - not_null                                      
+                - not_null   
+
+                                                 
           

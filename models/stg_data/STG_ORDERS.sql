@@ -4,6 +4,7 @@ WITH tb1  as(
  select
         id,
         order_date,
-        user_id        
+        user_id,
+        status        
      from {{source('datafeed_raw_schema','RAW_ORDERS')}})
      select * from tb1
