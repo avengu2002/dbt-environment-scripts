@@ -18,6 +18,7 @@ sources:
             - accepted_values
               values:['placed', 'shipped', 'completed', 'returned', 'return_pending']       
       - name: CUSTOMERS
+      - name: emp
 models:
     - name: STG_CUSTOMERS
       description: "A staging customers dbt model"
