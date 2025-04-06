@@ -42,6 +42,8 @@ models:
       +materialized: table
     stg_data:
       +materialized: table
+    stg_models:
+      +materialized: table
 
 snapshots:
   +target_schema: snapshot_schema
@@ -62,3 +64,10 @@ vars:
         , date_sub(current_date(), interval 6 day)
         , date_sub(current_date(), interval 7 day)
     ]      
+
+seeds:
+  my_new_project:
+    country_codes:
+      +column_types:
+        country_code: varchar(2)
+        Id: varchar(3)

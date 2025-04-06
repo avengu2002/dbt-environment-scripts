@@ -1,0 +1,15 @@
+version: 2
+exposures:
+  - name: weekly_metrics
+    label: KPI by the Week
+    type: dashboard
+    maturity: high
+    description: For more exposure about project details
+    depends_on:
+      - ref('employees')
+      - 'source(''datafeed_raw_schema'',''RAW_ORDERS'')'
+      - 'source(''datafeed_raw_schema'',''RAW_CUSTOMERS'')'
+ 
+    owner:
+      name: Asim
+      email: asimv05@gmail.com
